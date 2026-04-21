@@ -6,6 +6,10 @@ echo "Updated content" >> README.md
 
 cat README.md
 
+echo "Updated contented" >> README.md
+
+cat README.md
+
 git diff
 
 git add README.md
