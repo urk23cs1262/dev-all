@@ -10,10 +10,7 @@ use another terminal(+)
 
 Add Student
 
-Invoke-RestMethod -Uri http://localhost:5001/students `
--Method POST `
--Headers @{"Content-Type"="application/json"} `
--Body '{"name":"Alice","roll":"CS001"}'
+Invoke-RestMethod -Uri http://localhost:5001/students -Method POST -Headers @{"Content-Type"="application/json"} -Body '{"name":"Alice","roll":"CS001"}'
 
 View Students
 
