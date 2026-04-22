@@ -24,11 +24,17 @@ docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 
 if not
 
+docker rm -f jenkins
+
+docker volume rm jenkins-data
+
 docker start jenkins
 
 docker ps
 
 docker exec -u root jenkins bash -c "apt-get update && apt-get install -y docker.io"
+
+docker ps -a
 
 docker exec -u root jenkins chmod 666 /var/run/docker.sock
 
